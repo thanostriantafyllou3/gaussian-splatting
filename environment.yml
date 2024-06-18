@@ -3,15 +3,26 @@ channels:
   - pytorch
   - conda-forge
   - defaults
+  - nvidia
 dependencies:
-  - cudatoolkit=11.6
+  - cudatoolkit-dev
   - plyfile
-  - python=3.7.13
+  - python=3.8
   - pip=22.3.1
-  - pytorch=1.12.1
-  - torchaudio=0.12.1
-  - torchvision=0.13.1
+  - pytorch
+  - torchaudio
+  - torchvision
   - tqdm
+  - pytorch-cuda=12.1
   - pip:
     - submodules/diff-gaussian-rasterization
     - submodules/simple-knn
+
+
+# conda create -n gs3 python=3.10
+# conda activate gs3
+# conda install pytorch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 pytorch-cuda=12.1 -c pytorch -c nvidia
+# # verify pytorch installation
+# pip install plyfile tqdm
+# pip install submodules/diff-gaussian-rasterization
+# pip install submodules/simple-knn
